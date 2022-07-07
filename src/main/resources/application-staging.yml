@@ -1,0 +1,21 @@
+logging:
+  file: logs/scrap-api.log
+  level:
+    id.scrap: debug
+    org.springframework.web: debug
+server:
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+  port: 8383
+  servlet:
+     contextPath: /scrap-api
+spring:
+  application:
+    name: scrap-api
+url:
+ host: https://www.tokopedia.com/search
+ max.page: 5
+csv:
+ header: nameOfProduct#price#nameOfStore#rating#imageLink#description
+ name: file_generate.csv
